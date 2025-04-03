@@ -1,0 +1,47 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  .weather-container {
+    display: none;
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .current-weather {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .weather-icon {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .temp-large {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .forecast-day {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .weather-details-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .weather-details-item:last-child {
+    border-bottom: none;
+  }
