@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Dashboard</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1 class="my-4 text-center">Weather Dashboard</h1>
-    
-    <div class="search-panel mb-4">
-      <div class="input-group">
-        <input type="text" id="location-input" class="form-control" placeholder="Enter a city name (e.g., London)">
-        <button id="search-btn" class="btn btn-primary">
-          <i class="bi bi-search"></i> Search
-        </button>
-      </div>
-    </div>
-    
-    <div id="weather-container" class="weather-container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card current-weather">
-            <div class="card-body">
-              <h2 id="location">Search for a location to view weather</h2>
-              <div id="current-weather-details">
-                <!-- Weather details will be populated here -->
-              </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scalre=1.0">
+        <title>Weather Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="my-4 text-center">Weather Dashboard</h1>
+            <div class="search-panel mb-4">
+
+                <div class="input-group">
+                    <input type="text" id="location-input" class="form-control" placeholder="Enter a city name (eg. Boston)">
+                    <button id="search-btn"><i class="bi bi-search"></i>Search</button>
+                </div>
             </div>
-          </div>
-        </div>
-        
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <h3>Weather Details</h3>
-              <div id="weather-details">
-                <!-- Additional weather details will be displayed here -->
-              </div>
+            <div id="weather-container" class="weather-container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card current-weather">
+                            <div class="card-body">
+                                <h2 id="location"> Search for a location to view weather</h2>
+                                <div id="current-weather-details">
+                                    <!-- POPULATE WEATHER DETAILS HAPPEN HERE!!!!!!!!-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Weather Details</h3>
+                                <div id="weather-details">
+                                    <!------ ADD MORE WEATHER DETAILS HERE!!-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="app.js"></script>
-</body>
+        <script src="app.js"></script>
+    </body>
 </html>
