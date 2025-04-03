@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const weatherData = await getWeatherData(location);
     if (weatherData) {
       updateWeatherUI(weatherData);
-      
     }
   }
   // Event listeners
