@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const locationInput = document.getElementById('location-input');
     const searchBtn = document.getElementById('search-btn');
-    const currentLocationBtn = document.getElementById('current-location-btn');
     const weatherContainer = document.getElementById('weather-container');
     const locationEl = document.getElementById('location');
     const currentWeatherDetails = document.getElementById('current-weather-details');
@@ -10,14 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const forecastContainer = document.getElementById('forecast-container');
 
     // Weather background images based on weather codes
-  const weatherBackgrounds = {
-    sunny: 'https://images.unsplash.com/photo-1598717737265-d6c32e298785',
-    cloudy: 'https://images.unsplash.com/photo-1525920980995-f8a382bf42c5',
-    rainy: 'https://images.unsplash.com/photo-1519692933481-e162a57d6721',
-    snowy: 'https://images.unsplash.com/photo-1491002052546-bf38f186af56',
-    stormy: 'https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28',
-    foggy: 'https://images.unsplash.com/photo-1486184983407-a91569d369cb'
-  };
+    const weatherBackgrounds = {
+      sunny: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9',      
+      cloudy: 'https://images.unsplash.com/photo-1505245208761-ba872912fac0',     
+      rainy: 'https://images.unsplash.com/photo-1528184039933-8cf42027b37f',      
+      snowy: 'https://images.unsplash.com/photo-1513384771949-7ca04b2d190e',      
+      stormy: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29',     
+      foggy: 'https://images.unsplash.com/photo-1446034295857-c39f8844fad4'        
+    };
+    
   
   // Function to determine background image based on weather code
   function getWeatherBackground(weatherCode) {
@@ -165,23 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Function to get current location
-  async function getCurrentLocation() {
-    try {
-      const response = await fetch('/api/location');
-      const data = await response.json();
-      
-      if (data.error) {
-        throw new Error(data.error);
-      }
-      
-      locationInput.value = data.location;
-      handleSearch();
-    } catch (error) {
-      console.error('Error getting location:', error);
-      alert('Could not detect your location. Please enter it manually.');
-    }
-  }
 
   // Event listeners
   searchBtn.addEventListener('click', handleSearch);
@@ -190,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
       handleSearch();
     }
   });
-  currentLocationBtn.addEventListener('click', getCurrentLocation);
 });
 
 // Function to create a temperature chart
