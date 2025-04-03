@@ -10,15 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Weather background images based on weather codes
     const weatherBackgrounds = {
-      sunny: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9',      
-      cloudy: 'https://images.unsplash.com/photo-1505245208761-ba872912fac0',     
-      rainy: 'https://images.unsplash.com/photo-1528184039933-8cf42027b37f',      
-      snowy: 'https://images.unsplash.com/photo-1513384771949-7ca04b2d190e',      
-      stormy: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29',     
-      foggy: 'https://images.unsplash.com/photo-1446034295857-c39f8844fad4'        
+      sunny: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9',
+      cloudy: 'https://images.unsplash.com/photo-1505245208761-ba872912fac0',
+      rainy: 'https://images.unsplash.com/photo-1519692933481-e162a57d6721',
+      snowy: 'https://images.unsplash.com/photo-1446034295857-c39f8844fad4', 
+      stormy: 'https://images.unsplash.com/photo-1519692933481-e162a57d6721',
+      foggy: 'https://images.unsplash.com/photo-1446034295857-c39f8844fad4'       
     };
     
-  
   // Function to determine background image based on weather code
   function getWeatherBackground(weatherCode) {
     if (weatherCode <= 113) return weatherBackgrounds.sunny;
